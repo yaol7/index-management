@@ -1,0 +1,24 @@
+# TODO: Remove this before initial release, only for developmental purposes
+build:
+  maxIssues: 10
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+  SwallowedException: # Detekt fails to pick up the logger, and produces too many false positives for this rule
+    active: false
+
+style:
+  ForbiddenComment:
+    active: false
+  MaxLineLength:
+    maxLineLength: 150
+    excludes: ['**/test/**']
+
+complexity:
+  LargeClass:
+    excludes: ['**/test/**']
+  LongMethod:
+    excludes: ['**/test/**']
+  LongParameterList:
+    excludes: ['**/test/**']
